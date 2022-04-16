@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/sergiionyx/team-profile-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.2",
+    "inquirer": "^8.2.2"
+  },
+  "devDependencies": {
     "jest": "^27.5.1"
   }
 }
