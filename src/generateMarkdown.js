@@ -1,13 +1,11 @@
+// get function to create html file (from other js file)
 const writeToFile  = require('../utils/generateHTML.js');
 
 // GENERATE HTML PAGE BY PUTTING TOGETHER AVAILABLE ITEMS (MANAGER + ENGINEER + INTERN)
-const generateHTML = workforceData => {
-    const { engineers, interns, manager } = workforceData;
-    console.log(manager);
-    console.log(manager.id);
-    console.log(manager.email);
-    console.log(manager.officeNumb);
-
+const generateHTML = data => {
+    // refactor income data to object with 3 variables
+    const { engineers, interns, manager } = data;
+    // return html code for index.html
     return writeToFile(`
     <!DOCTYPE html>
     <html lang="en">
@@ -42,11 +40,12 @@ const generateHTML = workforceData => {
 
 </html>
      `)
-        .then(writeToFileResponse => {
-            console.log(writeToFileResponse);
+        // show responce in console.log after file was created
+        .then(response => {
+            console.log(response);
             return;
         })
-
+        // catch errors and show them if any
         .catch(err => {
             console.log(err);
         });
@@ -84,6 +83,7 @@ function generateManager(manager) {
 
 // GENERATE ENGINEERS CARD
 function generateEngineers(engineers) {
+    // using .map go through array and run arrow function for each element 
     return `
         ${engineers
             .map(({ name, id, email, github }) => {

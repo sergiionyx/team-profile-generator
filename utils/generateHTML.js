@@ -1,3 +1,4 @@
+// fs module required to create a file(for this case)
 const fs = require('fs');
 
 const writeFile = fileContent => {
