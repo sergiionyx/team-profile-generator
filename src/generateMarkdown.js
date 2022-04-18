@@ -90,10 +90,10 @@ function generateEngineers(engineers) {
                 return `
 <div class="card m-4 col-3 p-0" style="width: 18rem;">
     <div class="card-body bg-primary text-white">
-        <h5 class="card-title">Engineer</h5>
+        <h5 class="card-title">${name}</h5>
         <p class="card-text">
             <i class="bi bi-sunglasses"></i>
-            ${name}
+            Engineer
         </p>
     </div>
     <div class="bg-light">
